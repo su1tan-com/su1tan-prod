@@ -4,7 +4,7 @@ import { projects } from "../data/content";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-10">
+    <div className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-[22px] font-semibold">Projects / Contribution</h2>
@@ -30,6 +30,6 @@ export default function Projects() {
         </div>
         <div className="mt-10" style={{ borderBottom: "1px solid var(--border)" }} />
       </div>
-    </section>
+    </div>
   );
 }

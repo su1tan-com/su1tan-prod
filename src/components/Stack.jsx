@@ -2,7 +2,7 @@ import { stack } from "../data/content";
 
 export default function Stack() {
   return (
-    <section id="stack" className="py-10">
+    <div className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-[22px] font-semibold mb-6">Stack</h2>
         <div className="grid grid-cols-2 gap-3">
@@ -20,6 +20,6 @@ export default function Stack() {
         </div>
         <div className="mt-10" style={{ borderBottom: "1px solid var(--border)" }} />
       </div>
-    </section>
+    </div>
   );
 }

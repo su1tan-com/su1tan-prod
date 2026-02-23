@@ -1,30 +1,20 @@
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Education from "../components/Education";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
-import Stack from "../components/Stack";
-import Awards from "../components/Awards";
-import Certifications from "../components/Certifications";
-import Recommendations from "../components/Recommendations";
-import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
+import ContactNavSection from "../sections/ContactNavSection";
+import AboutNavSection from "../sections/AboutNavSection";
+import EducationNavSection from "../sections/EducationNavSection";
+import AchievementsNavSection from "../sections/AchievementsNavSection";
+import ExperienceNavSection from "../sections/ExperienceNavSection";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
-        <Stack />
-        <Awards />
-        <Certifications />
-        <Recommendations />
-        <Contact />
+        <AboutNavSection />
+        <EducationNavSection />
+        <ExperienceNavSection />
+        <AchievementsNavSection />
+        <ContactNavSection />
       </main>
     </>
   );

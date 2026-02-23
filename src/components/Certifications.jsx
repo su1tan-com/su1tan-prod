@@ -3,7 +3,7 @@ import { certifications } from "../data/content";
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-10">
+    <div className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-[22px] font-semibold mb-8">Certifications</h2>
         <div style={{ borderTop: "1px solid var(--border)" }}>
@@ -28,6 +28,6 @@ export default function Certifications() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

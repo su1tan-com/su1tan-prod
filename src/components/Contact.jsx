@@ -3,7 +3,7 @@ import { profile } from "../data/content";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16">
+    <div className="py-16">
       <div className="max-w-[720px] mx-auto px-6 text-center">
         <h2 className="text-[28px] font-semibold mb-3">Let's work together</h2>
         <p className="text-[15px] mb-8 max-w-md mx-auto" style={{ color: "var(--text-secondary)" }}>
@@ -25,6 +25,6 @@ export default function Contact() {
         </div>
         <p className="text-[12px] mt-16" style={{ color: "var(--text-muted)" }}>&copy; {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
       </div>
-    </section>
+    </div>
   );
 }

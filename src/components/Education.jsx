@@ -2,7 +2,7 @@ import { education } from "../data/content";
 
 export default function Education() {
   return (
-    <section id="education" className="py-10">
+    <div className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-[22px] font-semibold mb-8">Education</h2>
         <div className="space-y-8">
@@ -23,6 +23,6 @@ export default function Education() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

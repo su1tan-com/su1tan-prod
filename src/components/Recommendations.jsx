@@ -2,7 +2,7 @@ import { recommendations } from "../data/content";
 
 export default function Recommendations() {
   return (
-    <section id="recommendations" className="py-10">
+    <div className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-[22px] font-semibold mb-6">Recommendations</h2>
         <div className="space-y-5">
@@ -18,6 +18,6 @@ export default function Recommendations() {
         </div>
         <div className="mt-10" style={{ borderBottom: "1px solid var(--border)" }} />
       </div>
-    </section>
+    </div>
   );
 }

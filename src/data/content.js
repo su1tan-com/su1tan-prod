@@ -23,7 +23,7 @@ export const projects = [
     name: "KazLang",
     category: "Ed-Tech",
     slug: "kazlang",
-    image: "https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png",
+    image: "/projects/kazlang/kazlang.png",
     description: "An educational platform for learning the Kazakh language through interactive lessons and gamified experiences.",
     stack: ["Kotlin", "Jetpack Compose", "Firebase", "Room DB"],
     links: { playStore: "https://play.google.com/store/apps/details?id=kz.qpia.android&hl=en_US" },
@@ -143,14 +143,10 @@ export const recommendations = [
 ];
 
 export const navItems = [
-  { label: "Intro", href: "#intro" },
+
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Stack", href: "#stack" },
-  { label: "Awards", href: "#awards" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Recommendations", href: "#recommendations" },
+  { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];

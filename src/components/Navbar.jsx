@@ -4,7 +4,7 @@ import { navItems } from "../data/content";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
-  const [active, setActive] = useState("intro");
+  const [active, setActive] = useState("about");
   const [hidden, setHidden] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const lastY = useRef(0);
