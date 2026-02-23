@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #111111;
+  --surface: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.06);
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --text-tertiary: #aaaaaa;
+  --text-muted: #555555;
+  --bullet: #333333;
+  --nav-bg: rgba(26, 26, 26, 0.9);
+  --card-hover-border: rgba(255, 255, 255, 0.1);
+  --accent-bg: rgba(255, 255, 255, 0.1);
+  --btn-bg: #ffffff;
+  --btn-text: #111111;
+  --left-border: rgba(255, 255, 255, 0.2);
+  --scrollbar-track: #111111;
+  --scrollbar-thumb: #333333;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --border: rgba(0, 0, 0, 0.08);
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-tertiary: #555555;
+  --text-muted: #999999;
+  --bullet: #cccccc;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --card-hover-border: rgba(0, 0, 0, 0.15);
+  --accent-bg: rgba(0, 0, 0, 0.06);
+  --btn-bg: #111111;
+  --btn-text: #ffffff;
+  --left-border: rgba(0, 0, 0, 0.15);
+  --scrollbar-track: #ffffff;
+  --scrollbar-thumb: #cccccc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
+
+a { text-decoration: none; color: inherit; }

@@ -1,89 +1,26 @@
-<!-- Modularized HTML Structure -->
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://framerusercontent.com/images/8tSL7s651wHmDosPQUzfuiAUGPM.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sultan Suleimenov — Mobile Developer</title>
+    <meta name="description" content="Sultan Suleimenov - Mobile Engineer. Portfolio website with CV, tech stack, and experience." />
 
-<head>
-    <meta charset="utf-8">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sultan Suleimenov — Mobile Developer" />
+    <meta property="og:description" content="Sultan Suleimenov - Mobile Engineer. Portfolio website with CV, tech stack, and experience." />
+    <meta property="og:image" content="https://framerusercontent.com/images/pMcBU6KIIOT34A5o19hxA0f8vg.jpg" />
 
-    <script>
-        try {
-            if (localStorage.get("__framer_force_showing_editorbar_since")) {
-                const n = document.createElement("link");
-                n.rel = "modulepreload";
-                n.href = "https://framer.com/edit/init.mjs";
-                document.head.appendChild(n)
-            }
-        } catch (e) { }
-    </script>
-
-    <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="Framer 0138aee">
-    <title>Sultan Suleimenov CV</title>
-    <meta name="description" content="Sultan Suleimenov - Mobile Engineer. This is portfolio website where you can download my CV, review stack and my experience. ">
-    <meta name="framer-search-index" content="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/searchIndex-DB0Q1Qh44TTE.json">
-    <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/searchIndex-sqV8aYjaUWJ0.json">
-    <meta name="framer-html-plugin" content="disable">
-
-    <!-- Icons -->
-    <link href="https://framerusercontent.com/images/8tSL7s651wHmDosPQUzfuiAUGPM.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="https://framerusercontent.com/images/8tSL7s651wHmDosPQUzfuiAUGPM.png" rel="icon" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="https://framerusercontent.com/images/S3zm5r2fA7tWtKfQKAJfvXoWrA0.png">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sultan Suleimenov CV">
-    <meta property="og:description" content="Sultan Suleimenov - Mobile Engineer. This is portfolio website where you can download my CV, review stack and my experience. ">
-    <meta property="og:image" content="https://framerusercontent.com/images/pMcBU6KIIOT34A5o19hxA0f8vg.jpg">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sultan Suleimenov CV">
-    <meta name="twitter:description" content="Sultan Suleimenov - Mobile Engineer. This is portfolio website where you can download my CV, review stack and my experience. ">
-    <meta name="twitter:image" content="https://framerusercontent.com/images/pMcBU6KIIOT34A5o19hxA0f8vg.jpg">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/breakpoints.css">
-    <link rel="stylesheet" href="styles/main.css">
-
-    <!-- External Scripts -->
-    <script src="scripts/framer-init.js"></script>
-    <script src="scripts/locale-override.js" defer></script>
-    <script src="scripts/environment-setup.js" defer></script>
-
-    <!-- Module Preloads -->
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/react.ByyR4imK.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/rolldown-runtime.BtfoS8kp.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/motion.nqpo_Dbg.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/framer.Cdz5hTdB.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/shared-lib.C538NH8w.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/mo1sZbOD9SYYabK8dTI0KQt-i7s4vn_r-RQAWRRsHLw.CeZ0F3WV.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/XUkDuLTkm.MbiRt_5-.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/vM9U255W6.B0Goe4UL.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/JYh1FGCyG.BlSwYflb.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/Qe1mVlqRk.CUaNxuAK.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/MHt_2fMwJ.B-D6FOc4.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/augiA20Il.BdmO5Fqe.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/pGRUZOUhT.DCyWofPc.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/pCq4CKmyB.duxTjpC1.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/trFSZRJZA.DHzQSYeO.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/script_main.D7mLC3EF.mjs">
-
-    <meta name="robots" content="max-image-preview:large">
-
-    <!-- Main Framer Script -->
-    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/2aD4q3OSaM9m30CtKoRyhb/script_main.D7mLC3EF.mjs"></script>
-
-    <!-- Framer Handover Data -->
-    <script type="framer/handover" id="__framer__handoverData">[{"0":1,"1":62},["Map",2,3],"{\"from\":\"753e6f18-ac07-41d8-86f1-901f59453a53\",\"limit\":{\"type\":\"LiteralValue\",\"value\":4},\"select\":[{\"collection\":\"YrknSS_Da\",\"name\":\"t_lublspn\",\"type\":\"Identifier\"},{\"collection\":\"YrknSS_Da\",\"name\":\"mGyrob61O\",\"type\":\"Identifier\"},{\"collection\":\"YrknSS_Da\",\"name\":\"P18KwpLmQ\",\"type\":\"Identifier\"},{\"collection\":\"YrknSS_Da\",\"name\":\"cJCDj9khR\",\"type\":\"Identifier\"},{\"collection\":\"YrknSS_Da\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[4,21,36,49],{"t_lublspn":5,"mGyrob61O":12,"P18KwpLmQ":15,"cJCDj9khR":17,"id":19},{"type":6,"value":7},"responsiveimage",{"src":8,"srcSet":9,"pixelWidth":10,"pixelHeight":11},"https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png?width=1818&height=1254","https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png?scale-down-to=512&width=1818&height=1254 512w,https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png?scale-down-to=1024&width=1818&height=1254 1024w,https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png?width=1818&height=1254 1818w",1818,1254,{"type":13,"value":14},"string","KazLang",{"type":13,"value":16},"Ed-Tech",{"type":13,"value":18},"kazlang",{"type":13,"value":20},"J2biFsS3q",{"t_lublspn":22,"mGyrob61O":28,"P18KwpLmQ":30,"cJCDj9khR":32,"id":34},{"type":6,"value":23},{"src":24,"srcSet":25,"pixelWidth":26,"pixelHeight":27},"https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg?width=2400&height=1800","https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg?scale-down-to=512&width=2400&height=1800 512w,https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg?scale-down-to=1024&width=2400&height=1800 1024w,https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg?scale-down-to=2048&width=2400&height=1800 2048w,https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg?width=2400&height=1800 2400w",2400,1800,{"type":13,"value":29},"Shiro",{"type":13,"value":31},"Perosnal Portfolio",{"type":13,"value":33},"shiro",{"type":13,"value":35},"m2nOGDBY3",{"t_lublspn":37,"mGyrob61O":41,"P18KwpLmQ":43,"cJCDj9khR":45,"id":47},{"type":6,"value":38},{"src":39,"srcSet":40,"pixelWidth":26,"pixelHeight":27},"https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg?width=2400&height=1800","https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg?scale-down-to=512&width=2400&height=1800 512w,https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg?scale-down-to=1024&width=2400&height=1800 1024w,https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg?scale-down-to=2048&width=2400&height=1800 2048w,https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg?width=2400&height=1800 2400w",{"type":13,"value":42},"Vivid",{"type":13,"value":44},"App Showcase",{"type":13,"value":46},"vivid",{"type":13,"value":48},"j1OzKrN7K",{"t_lublspn":50,"mGyrob61O":54,"P18KwpLmQ":56,"cJCDj9khR":58,"id":60},{"type":6,"value":51},{"src":52,"srcSet":53,"pixelWidth":26,"pixelHeight":27},"https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg?width=2400&height=1800","https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg?scale-down-to=512&width=2400&height=1800 512w,https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg?scale-down-to=1024&width=2400&height=1800 1024w,https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg?scale-down-to=2048&width=2400&height=1800 2048w,https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg?width=2400&height=1800 2400w",{"type":13,"value":55},"Capture",{"type":13,"value":57},"Video Agency",{"type":13,"value":59},"capture",{"type":13,"value":61},"AAChqklGy",["Map"]]</script>
-
-    <!-- SVG Templates Container -->
-    <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
-    </div>
-</head>
-
-<body>
-    <div id="main"></div>
-</body>
-
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sultan Suleimenov — Mobile Developer" />
+    <meta name="twitter:description" content="Sultan Suleimenov - Mobile Engineer. Portfolio website with CV, tech stack, and experience." />
+    <meta name="twitter:image" content="https://framerusercontent.com/images/pMcBU6KIIOT34A5o19hxA0f8vg.jpg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

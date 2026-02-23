@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sultan Suleimenov — Mobile Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #111111; --surface: #1a1a1a; --border: rgba(255,255,255,0.06);
+        --text-primary: #ffffff; --text-secondary: #888888; --text-tertiary: #aaaaaa;
+        --text-muted: #555555; --bullet: #333333; --nav-bg: rgba(26,26,26,0.9);
+        --card-hover-border: rgba(255,255,255,0.1); --accent-bg: rgba(255,255,255,0.1);
+        --btn-bg: #ffffff; --btn-text: #111111; --left-border: rgba(255,255,255,0.2);
+      }
+      [data-theme="light"] {
+        --bg: #ffffff; --surface: #f5f5f5; --border: rgba(0,0,0,0.08);
+        --text-primary: #111111; --text-secondary: #666666; --text-tertiary: #555555;
+        --text-muted: #999999; --bullet: #cccccc; --nav-bg: rgba(255,255,255,0.9);
+        --card-hover-border: rgba(0,0,0,0.15); --accent-bg: rgba(0,0,0,0.06);
+        --btn-bg: #111111; --btn-text: #ffffff; --left-border: rgba(0,0,0,0.15);
+      }
+      html { scroll-behavior: smooth; }
+      body { background: var(--bg); color: var(--text-primary); font-family: 'Inter', system-ui, sans-serif; margin: 0; -webkit-font-smoothing: antialiased; transition: background-color 0.3s, color 0.3s; }
+      a { text-decoration: none; color: inherit; }
+      .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:.5 } }
+      .animate-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: var(--bg); }
+      ::-webkit-scrollbar-thumb { background: var(--bullet); border-radius: 2px; }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+  <div class="flex items-center gap-1 px-2 py-2 rounded-full backdrop-blur-xl shadow-2xl" style="background:var(--nav-bg);border:1px solid var(--border)">
+    <a href="#intro" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="background:var(--accent-bg);color:var(--text-primary)">Intro</a>
+    <a href="#about" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">About</a>
+    <a href="#education" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Education</a>
+    <a href="#experience" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Experience</a>
+    <a href="#work" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Work</a>
+    <a href="#stack" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Stack</a>
+    <a href="#blog" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Blog</a>
+    <a href="#contact" class="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all" style="color:var(--text-secondary)">Contact</a>
+    <button onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'" class="ml-1 p-2 rounded-full" style="color:var(--text-secondary)" aria-label="Toggle theme">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="intro" class="pt-32 pb-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <div class="flex items-start justify-between mb-6">
+      <div class="flex items-center gap-5">
+        <div class="w-[88px] h-[88px] rounded-2xl flex items-center justify-center text-[32px] font-bold" style="background:var(--surface);color:var(--text-secondary)">SS</div>
+        <div>
+          <h1 class="text-[28px] font-semibold leading-tight">Sultan Suleimenov</h1>
+          <p class="text-[15px] mt-0.5" style="color:var(--text-secondary)">Mobile Developer</p>
+          <div class="flex items-center gap-4 mt-2">
+            <span class="flex items-center gap-1.5 text-[13px]" style="color:var(--text-secondary)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Boston, MA, USA
+            </span>
+            <span class="flex items-center gap-1.5 text-[13px]">
+              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span style="color:var(--text-secondary)">Available for work</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 items-end shrink-0">
+        <a href="#contact" class="flex items-center gap-1.5 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">Get in touch <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        <a href="#" class="flex items-center gap-1.5 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">Download CV <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+      </div>
+    </div>
+    <div class="flex items-center gap-5 flex-wrap pb-8" style="border-bottom:1px solid var(--border)">
+      <a href="mailto:su1tan.com.goo@gmail.com" class="flex items-center gap-2 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        su1tan.com.goo@gmail.com
+      </a>
+      <a href="tel:+18574212548" class="flex items-center gap-2 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 857 421 25 48
+      </a>
+      <a href="https://github.com/su1tan-com" target="_blank" class="flex items-center gap-2 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        Github
+      </a>
+      <a href="https://www.linkedin.com/in/su1tan-com" target="_blank" class="flex items-center gap-2 text-[13px] hover:opacity-80 transition-colors" style="color:var(--text-secondary)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-6">About me</h2>
+    <div class="space-y-4">
+      <p class="text-[15px] leading-relaxed" style="color:var(--text-tertiary)">I'm Sultan Suleimenov, a software engineer specializing in native mobile development. My core expertise is building robust, scalable mobile applications, but I'm also deeply interested in mobile game development and creating developer tools and libraries.</p>
+      <p class="text-[15px] leading-relaxed" style="color:var(--text-tertiary)">I've worked in leading tech companies across the CIS region, contributing to high-impact products with large user bases. Today, I'm exploring opportunities in the United States and Western markets, where I aim to apply my engineering experience on a global scale.</p>
+      <p class="text-[15px] leading-relaxed" style="color:var(--text-tertiary)">Beyond engineering, I actively invest in the tech community by organizing events, meetups, and educational initiatives. I enjoy bringing people together, sharing knowledge, and helping grow a strong, collaborative developer ecosystem.</p>
+      <p class="text-[15px] leading-relaxed" style="color:var(--text-tertiary)">I'm driven by curiosity, clean engineering principles, and the desire to build products that genuinely make an impact.</p>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-8">Education</h2>
+    <div class="space-y-8 mb-12">
+      <div class="pl-5" style="border-left:2px solid var(--left-border)">
+        <h3 class="text-[15px] font-semibold">Master of Science in Computer Information Systems</h3>
+        <div class="flex items-center gap-2 mt-1 text-[13px]" style="color:var(--text-secondary)">
+          <span>Boston University</span><span style="color:var(--text-muted)">|</span><span>Boston, MA, USA</span><span style="color:var(--text-muted)">|</span><span>2025 — 2027</span>
+        </div>
+        <p class="text-[14px] leading-relaxed mt-3" style="color:var(--text-tertiary)">Focused on advanced programming techniques, software design, and data structures and algorithms.</p>
+      </div>
+      <div class="pl-5" style="border-left:2px solid var(--left-border)">
+        <h3 class="text-[15px] font-semibold">Bachelor of Computer Science</h3>
+        <div class="flex items-center gap-2 mt-1 text-[13px]" style="color:var(--text-secondary)">
+          <span>SDU University</span><span style="color:var(--text-muted)">|</span><span>Almaty, Kazakhstan</span><span style="color:var(--text-muted)">|</span><span>2020 — 2024</span>
+        </div>
+        <p class="text-[14px] leading-relaxed mt-3" style="color:var(--text-tertiary)">Top 4 diploma project all over engineering faculty. Created Superapp for university with indoor map, AI assistant notes and telegram bots integration.</p>
+      </div>
+    </div>
+    <h3 class="text-[18px] font-semibold mb-5">Certifications</h3>
+    <div style="border-top:1px solid var(--border)">
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">Compose Application</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Google Developers Group, 2024</span></div><a href="https://www.linkedin.com/posts/su1tan-com_google-android-certificate-activity-7165993245594894336-W0ui/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" target="_blank" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">View <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">Advanced Android Development</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Justcode, 2023</span></div><a href="https://www.linkedin.com/posts/su1tan-com_sultan-suleimenov-activity-7145725359366311936-VnFA/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" target="_blank" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">View <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">Mobile Android</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— OneLab, 2023</span></div><a href="https://www.linkedin.com/posts/su1tan-com_certificate-android-course-activity-7055572568560263168-1AKy/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" target="_blank" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">View <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">CCNAv7 Cisco certification</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Cisco, 2022</span></div><a href="https://www.linkedin.com/posts/su1tan-com_%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D1%85-%D1%81%D0%B5%D1%82%D0%B5%D0%B9-activity-7030511352649539584-vfG-/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" target="_blank" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">View <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-8">Experience</h2>
+    <div class="space-y-10">
+      <div>
+        <div class="flex items-center gap-1.5 text-[12px] mb-2" style="color:var(--text-muted)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Almaty, Kazakhstan</div>
+        <div class="flex items-baseline justify-between mb-1"><h3 class="text-[16px] font-semibold">Kaspi.kz</h3><span class="text-[13px] shrink-0 ml-4" style="color:var(--text-secondary)">May 2025 — August 2025</span></div>
+        <p class="text-[14px] mb-4" style="color:var(--text-secondary)">Middle Software Engineer</p>
+        <ul class="space-y-3">
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Engineered Palm Pay biometric palm-vein payment integration as sole Android developer, enabling Kazakhstan to become 3rd country globally to deploy hand-scanning authentication</li>
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Led UI modernization for 85+ payment screens, refactoring XML to Jetpack Compose with 30+ accessible components and TalkBack support</li>
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Built Bluetooth connectivity module from scratch for contactless payment system supporting Classic and BLE protocols</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex items-center gap-1.5 text-[12px] mb-2" style="color:var(--text-muted)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Almaty, Kazakhstan</div>
+        <div class="flex items-baseline justify-between mb-1"><h3 class="text-[16px] font-semibold">Arbuz.kz</h3><span class="text-[13px] shrink-0 ml-4" style="color:var(--text-secondary)">August 2023 — April 2025</span></div>
+        <p class="text-[14px] mb-4" style="color:var(--text-secondary)">Android Developer</p>
+        <ul class="space-y-3">
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Owned Warehouse Android app end-to-end, refactoring 40% of codebase and migrating 32% to Jetpack Compose, reducing crash rate by 25%</li>
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Integrated cross-app payment flow acquiring 5,174 users within first month; automated courier notifications reducing help desk requests by 89%</li>
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Built Android Studio plugin for Clean Architecture scaffolding, reducing feature setup time by 91%</li>
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Increased authorization conversion by 39.4% and address submission by 34.8% through UX optimization</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex items-center gap-1.5 text-[12px] mb-2" style="color:var(--text-muted)"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Almaty, Kazakhstan</div>
+        <div class="flex items-baseline justify-between mb-1"><h3 class="text-[16px] font-semibold">Kcell LLC</h3><span class="text-[13px] shrink-0 ml-4" style="color:var(--text-secondary)">June 2023 — August 2023</span></div>
+        <p class="text-[14px] mb-4" style="color:var(--text-secondary)">Software Engineer Intern</p>
+        <ul class="space-y-3">
+          <li class="text-[14px] leading-relaxed pl-4 relative" style="color:var(--text-tertiary)"><span class="absolute left-0 top-[9px] w-1.5 h-1.5 rounded-full" style="background:var(--bullet)"></span>Details coming soon — please update with your Kcell internship responsibilities.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="work" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-[22px] font-semibold">Projects / Contribution</h2>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <a href="#" class="group block rounded-xl overflow-hidden transition-all" style="background:var(--surface);border:1px solid var(--border)">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="flex items-center justify-between p-4"><div><h3 class="text-[15px] font-medium">KazLang</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">Ed-Tech</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="#" class="group block rounded-xl overflow-hidden transition-all" style="background:var(--surface);border:1px solid var(--border)">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="flex items-center justify-between p-4"><div><h3 class="text-[15px] font-medium">Shiro</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">Personal Portfolio</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="#" class="group block rounded-xl overflow-hidden transition-all" style="background:var(--surface);border:1px solid var(--border)">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="flex items-center justify-between p-4"><div><h3 class="text-[15px] font-medium">Vivid</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">App Showcase</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="#" class="group block rounded-xl overflow-hidden transition-all" style="background:var(--surface);border:1px solid var(--border)">
+        <div class="aspect-[4/3] overflow-hidden"><img src="https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="flex items-center justify-between p-4"><div><h3 class="text-[15px] font-medium">Capture</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">Video Agency</p></div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-6">Stack</h2>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#7F52FF22;color:#7F52FF">KO</div><div><h3 class="text-[14px] font-medium">Kotlin</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Primary Language</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#4285F422;color:#4285F4">JE</div><div><h3 class="text-[14px] font-medium">Jetpack Compose</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Modern UI Toolkit</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#3DDC8422;color:#3DDC84">AN</div><div><h3 class="text-[14px] font-medium">Android</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Mobile Platform</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#02303A22;color:#4a8a96">GR</div><div><h3 class="text-[14px] font-medium">Gradle</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Build System</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#F24E1E22;color:#F24E1E">FI</div><div><h3 class="text-[14px] font-medium">Figma</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Design Tool</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl transition-all" style="background:var(--surface);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center text-[14px] font-bold shrink-0" style="background:#F0503222;color:#F05032">GI</div><div><h3 class="text-[14px] font-medium">Git</h3><p class="text-[12px] mt-0.5" style="color:var(--text-secondary)">Version Control</p></div></div>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-5">Awards</h2>
+    <div style="border-top:1px solid var(--border)">
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">AI and Big data</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Startup Incubator, 2024</span></div><a href="https://www.linkedin.com/posts/su1tan-com_%D0%BC%D1%8B-%D0%B2%D1%8B%D0%B8%D0%B3%D1%80%D0%B0%D0%BB%D0%B8-%D0%B2-%D0%B8%D0%BD%D0%BA%D1%83%D0%B1%D0%B0%D1%82%D0%BE%D1%80%D0%B5-ai-big-data-activity-7212700994864852993-gLxg/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">Visit <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">First Digital Keruen</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Alatau hub, 2024</span></div><a href="https://www.linkedin.com/posts/su1tan-com_%D0%B0%D0%BB%D0%BC%D0%B0%D1%82%D1%8B-%D0%BE%D0%B1%D0%BB%D1%8B%D1%81%D1%8B%D0%BD%D0%B4%D0%B0-%D0%B0%D0%BB%D2%93%D0%B0%D1%88-%D1%80%D0%B5%D1%82-digital-keruen-activity-7302437186891665408-YRo-/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">Visit <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+      <div class="flex items-center justify-between py-3.5" style="border-bottom:1px solid var(--border)"><div><span class="text-[14px] font-medium">Halyk OYI Hackathon</span><span class="text-[13px] ml-2" style="color:var(--text-secondary)">— Halyk bank, 2023</span></div><a href="https://www.linkedin.com/posts/su1tan-com_yo-yo-its-sultan-a-few-days-ago-arsen-activity-7132392942689775616-hrrb/?rcm=ACoAADXLHscBsY97XJCkwDhBHoM1Njrfoa5Pw5Q" class="flex items-center gap-1 text-[13px] shrink-0 hover:opacity-80" style="color:var(--text-secondary)">Visit <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></div>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS (NO ITALIC) -->
+<section class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <h2 class="text-[22px] font-semibold mb-6">Recommendations</h2>
+    <div class="space-y-5">
+      <div class="pl-5 py-1" style="border-left:2px solid var(--left-border)">
+        <div class="mb-3"><h3 class="text-[15px] font-semibold">Fatima Tuyakbayeva</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">Head of Division &middot; Android lead at Kaspi.kz</p></div>
+        <p class="text-[14px] leading-relaxed" style="color:var(--text-tertiary)">"I would like to highlight Sultan's contribution to our Android development team. Although he was with us for only three months, he quickly proved himself to be communicative, reliable, and highly adaptable. Sultan consistently delivered his tasks with responsibility and attention to detail. I am confident that with his work ethic and character, he will continue to grow rapidly as an engineer and become a valuable addition to any team."</p>
+      </div>
+      <div class="pl-5 py-1" style="border-left:2px solid var(--left-border)">
+        <div class="mb-3"><h3 class="text-[15px] font-semibold">Osman Suleimanov</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">Android Tech Lead &middot; at Arbuz.kz</p></div>
+        <p class="text-[14px] leading-relaxed" style="color:var(--text-tertiary)">"I am pleased to recommend Sultan Suleimenov for a position within your organization. Sultan has worked under my supervision at Arbuz.kz as an Android Developer for the past year, where he consistently delivered high-impact results. I recommend him without reservation and am confident he will be a valuable asset to your organization."</p>
+      </div>
+      <div class="pl-5 py-1" style="border-left:2px solid var(--left-border)">
+        <div class="mb-3"><h3 class="text-[15px] font-semibold">Akniyet Alibek</h3><p class="text-[13px] mt-0.5" style="color:var(--text-secondary)">iOS Developer &middot; same team at Arbuz.kz</p></div>
+        <p class="text-[14px] leading-relaxed" style="color:var(--text-tertiary)">"I had the pleasure of working alongside Sultan in the same team, where he consistently demonstrated his expertise as an Android developer. He is an incredibly proactive individual, always asking insightful questions and showing initiative to tackle challenges head-on. His confidence in public speaking and his ability to clearly articulate complex concepts make him a valuable asset to any project or team. It was a true pleasure to work with Sultan and I highly recommend him for any future endeavors!"</p>
+      </div>
+    </div>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="py-10">
+  <div class="max-w-[720px] mx-auto px-6">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-[22px] font-semibold">Articles & publications</h2>
+      <a href="https://www.linkedin.com/in/sultansuleimenov/" target="_blank" class="flex items-center gap-1 text-[13px] hover:opacity-80" style="color:var(--text-secondary)">View all posts <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    </div>
+    <a href="https://www.linkedin.com/in/sultansuleimenov/" target="_blank" class="group flex gap-5 rounded-xl overflow-hidden transition-all" style="background:var(--surface);border:1px solid var(--border)">
+      <div class="w-[240px] shrink-0 overflow-hidden"><img src="https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+      <div class="py-5 pr-5 flex flex-col justify-center">
+        <p class="text-[12px] mb-2" style="color:var(--text-muted)">Web Design Journal &middot; May 15, 2024</p>
+        <h3 class="text-[15px] font-semibold leading-snug mb-2">The Future of Web Design: Trends to Watch in 2024</h3>
+        <p class="text-[13px] leading-relaxed mb-3 line-clamp-2" style="color:var(--text-secondary)">An in-depth analysis of upcoming trends in web design, focusing on emerging technologies and design philosophies.</p>
+        <span class="flex items-center gap-1 text-[13px] group-hover:opacity-80" style="color:var(--text-secondary)">Read article <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+    </a>
+    <div class="mt-10" style="border-bottom:1px solid var(--border)"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16">
+  <div class="max-w-[720px] mx-auto px-6 text-center">
+    <h2 class="text-[28px] font-semibold mb-3">Let's work together</h2>
+    <p class="text-[15px] mb-8 max-w-md mx-auto" style="color:var(--text-secondary)">I'm currently open to new opportunities. If you'd like to collaborate or just say hello, feel free to reach out.</p>
+    <a href="mailto:su1tan.com.goo@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-[14px] font-medium hover:opacity-90 transition-colors" style="background:var(--btn-bg);color:var(--btn-text)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Get in touch
+    </a>
+    <div class="flex items-center justify-center gap-6 mt-8">
+      <a href="tel:+18574212548" class="flex items-center gap-1.5 text-[13px] hover:opacity-80" style="color:var(--text-secondary)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 857 421 25 48
+      </a>
+      <a href="https://github.com/su1tan-com" target="_blank" class="flex items-center gap-1.5 text-[13px] hover:opacity-80" style="color:var(--text-secondary)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        Github <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/su1tan-com" target="_blank" class="flex items-center gap-1.5 text-[13px] hover:opacity-80" style="color:var(--text-secondary)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+    <p class="text-[12px] mt-16" style="color:var(--text-muted)">&copy; 2026 Sultan Suleimenov. All rights reserved.</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
