@@ -26,38 +26,18 @@ export const projects = [
     image: "https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png",
     description: "An educational platform for learning the Kazakh language through interactive lessons and gamified experiences.",
     stack: ["Kotlin", "Jetpack Compose", "Firebase", "Room DB"],
-    links: { playStore: "#", github: "#" },
+    links: { playStore: "https://play.google.com/store/apps/details?id=kz.qpia.android&hl=en_US" },
     screenshots: [],
   },
   {
-    name: "Shiro",
-    category: "Personal Portfolio",
-    slug: "shiro",
-    image: "https://framerusercontent.com/images/lhf3igLL87Ewc7eDRFourzAdGE.jpg",
-    description: "A clean, minimal personal portfolio template built with modern web technologies.",
-    stack: ["React", "Framer Motion", "Tailwind CSS"],
-    links: { live: "#", github: "#" },
-    screenshots: [],
-  },
-  {
-    name: "Vivid",
-    category: "App Showcase",
-    slug: "vivid",
-    image: "https://framerusercontent.com/images/ULVReqxDHuFzobZf0aoTil4V8.jpg",
-    description: "A showcase app demonstrating modern Android UI patterns and animations.",
-    stack: ["Kotlin", "Jetpack Compose", "Material 3"],
-    links: { playStore: "#", github: "#" },
-    screenshots: [],
-  },
-  {
-    name: "Capture",
-    category: "Video Agency",
-    slug: "capture",
-    image: "https://framerusercontent.com/images/ouJv0UQa3jjr5tSQkR8FvAiByM.jpg",
-    description: "A video production agency website with portfolio showcase and booking system.",
-    stack: ["React", "Next.js", "Tailwind CSS"],
-    links: { live: "#" },
-    screenshots: [],
+    name: "SDUHub",
+    category: "University Superapp",
+    slug: "sduhub",
+    image: "/projects/sduhub/sduhub.png",
+    description: "A comprehensive superapp for SDU University students, offering features like indoor navigation, note-taking, AI-chat bot and seamless integration with university services.",
+    stack: ["Kotlin", "Ktor", "Room DB", "Jetpack Compose", "Telegram Bots API", "DI koin", "Jetpack Android", "Firebase"],
+    links: { github: "https://github.com/su1tan-com/SDUHub" },
+    screenshots: [ "/projects/sduhub/1.png", "/projects/sduhub/2.png", "/projects/sduhub/3.png", "/projects/sduhub/4.png", "/projects/sduhub/5.png", "/projects/sduhub/6.png", "/projects/sduhub/7.png" ],
   },
 ];
 
@@ -92,7 +72,10 @@ export const experience = [
     location: "Almaty, Kazakhstan",
     period: "June 2023 — August 2023",
     bullets: [
-      "Details coming soon — please update with your Kcell internship responsibilities.",
+      "Developed and maintained the front-end of e-commerce websites, improving site speed by 20%.",
+      "Worked closely with back-end developers to integrate APIs and enhance site capabilities.",
+      "Ensured websites met accessibility standards and were SEO optimized.",
+      "Created visual design assets and graphics for online marketing campaigns.",
     ],
   },
 ];
@@ -102,7 +85,7 @@ export const education = [
     degree: "Master of Science in Computer Information Systems",
     school: "Boston University",
     location: "Boston, MA, USA",
-    period: "2025 — 2027",
+    period: "2025 — 2026",
     description:
       "Focused on advanced programming techniques, software design, and data structures and algorithms.",
   },
@@ -159,25 +142,15 @@ export const recommendations = [
   },
 ];
 
-export const articles = [
-  {
-    title: "The Future of Web Design: Trends to Watch in 2024",
-    source: "Web Design Journal",
-    date: "May 15, 2024",
-    excerpt:
-      "An in-depth analysis of upcoming trends in web design, focusing on emerging technologies and design philosophies that are set to shape the future of the industry.",
-    image: "https://framerusercontent.com/images/XpleE6PZrZqNzXsz9i8QkHajXf4.png",
-    link: "https://www.linkedin.com/in/sultansuleimenov/",
-  },
-];
-
 export const navItems = [
   { label: "Intro", href: "#intro" },
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "Stack", href: "#stack" },
-  { label: "Blog", href: "#blog" },
+  { label: "Awards", href: "#awards" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Recommendations", href: "#recommendations" },
   { label: "Contact", href: "#contact" },
 ];

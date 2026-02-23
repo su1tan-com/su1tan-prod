@@ -5,8 +5,8 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Stack from "../components/Stack";
 import Awards from "../components/Awards";
+import Certifications from "../components/Certifications";
 import Recommendations from "../components/Recommendations";
-import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 
@@ -22,8 +22,8 @@ export default function Home() {
         <Projects />
         <Stack />
         <Awards />
+        <Certifications />
         <Recommendations />
-        <Blog />
         <Contact />
       </main>
     </>

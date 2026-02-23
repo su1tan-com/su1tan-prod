@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import { navItems } from "../data/content";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
   const [active, setActive] = useState("intro");
   const [hidden, setHidden] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const lastY = useRef(0);
   const { theme, toggle } = useTheme();
 
@@ -36,6 +37,7 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
+      if (y !== lastY.current) setIsOpen(false);
       setHidden(y > lastY.current && y > 100);
       lastY.current = y;
     };
@@ -45,39 +47,57 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[90%] max-w-fit ${
         hidden ? "-translate-y-24 opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
       <div
-        className="flex items-center gap-1 px-2 py-2 rounded-full backdrop-blur-xl shadow-2xl"
+        className="flex flex-col md:flex-row items-center gap-1 px-2 py-2 rounded-[24px] md:rounded-full backdrop-blur-xl shadow-2xl"
         style={{ backgroundColor: "var(--nav-bg)", border: "1px solid var(--border)" }}
       >
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 whitespace-nowrap"
-            style={{
-              backgroundColor: active === item.href.slice(1) ? "var(--accent-bg)" : "transparent",
-              color: active === item.href.slice(1) ? "var(--text-primary)" : "var(--text-secondary)",
-            }}
+        <div className="flex items-center justify-between w-full md:w-auto px-2 md:px-0">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-full"
+            style={{ color: "var(--text-secondary)" }}
           >
-            {item.label}
-          </a>
-        ))}
-        <button
-          onClick={toggle}
-          className="ml-1 p-2 rounded-full transition-colors"
-          style={{ color: "var(--text-secondary)" }}
-          aria-label="Toggle theme"
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+          
+          <button
+            onClick={toggle}
+            className="p-2 rounded-full transition-colors order-last md:order-none"
+            style={{ color: "var(--text-secondary)" }}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+        </div>
+
+        <div 
+          className={`${
+            isOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row items-center gap-1 w-full mt-2 md:mt-0`}
         >
-          {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
-        </button>
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false); // Закрыть меню после клика
+                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full md:w-auto text-center px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200"
+              style={{
+                backgroundColor: active === item.href.slice(1) ? "var(--accent-bg)" : "transparent",
+                color: active === item.href.slice(1) ? "var(--text-primary)" : "var(--text-secondary)",
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </nav>
   );

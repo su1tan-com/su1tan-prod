@@ -2,7 +2,7 @@ import { recommendations } from "../data/content";
 
 export default function Recommendations() {
   return (
-    <section className="py-10">
+    <section id="recommendations" className="py-10">
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-[22px] font-semibold mb-6">Recommendations</h2>
         <div className="space-y-5">
