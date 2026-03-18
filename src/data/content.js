@@ -65,19 +65,7 @@ export const experience = [
       "Created Gradle convention plugins eliminating 200+ lines of duplicate configuration across 12 modules",
       "Increased authorization conversion by 39.4% and address submission by 34.8% through UX optimization and A/B testing",
     ],
-  },
-  {
-    company: "Kcell LLC",
-    role: "Software Engineer Intern",
-    location: "Almaty, Kazakhstan",
-    period: "June 2023 — August 2023",
-    bullets: [
-      "Developed and maintained the front-end of e-commerce websites, improving site speed by 20%.",
-      "Worked closely with back-end developers to integrate APIs and enhance site capabilities.",
-      "Ensured websites met accessibility standards and were SEO optimized.",
-      "Created visual design assets and graphics for online marketing campaigns.",
-    ],
-  },
+  }
 ];
 
 export const education = [
@@ -109,10 +97,10 @@ export const certifications = [
 export const stack = [
   { name: "Kotlin", description: "Primary Language", color: "#7F52FF" },
   { name: "Jetpack Compose", description: "Modern UI Toolkit", color: "#4285F4" },
-  { name: "Android", description: "Mobile Platform", color: "#3DDC84" },
+  { name: "Android Jetpack", description: "Collection of libraries for Android development", color: "#3DDC84" },
   { name: "Gradle", description: "Build System", color: "#02303A" },
-  { name: "Figma", description: "Design Tool", color: "#F24E1E" },
-  { name: "Git", description: "Version Control", color: "#F05032" },
+  { name: "Coroutines", description: "Concurrent Programming", color: "#F24E1E" },
+  { name: "Android SDK", description: "Android's Software Development Kit", color: "#F05032" },
 ];
 
 export const awards = [
